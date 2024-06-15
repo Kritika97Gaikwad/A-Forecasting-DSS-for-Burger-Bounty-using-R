@@ -22,6 +22,7 @@ This Shiny app serves as a dashboard for summarizing and updating monthly sales 
 - Shiny package installed (`install.packages("shiny")`)
 - Shinydashboard package installed (`install.packages("shinydashboard")`)
 - Readxl package installed (`install.packages("readxl")`)
+- install.packages("openxlsx")
 
 ### Running the App
 
