@@ -1,6 +1,12 @@
 # A-Forecasting-DSS-for-Burger-Bounty-using-R
 ![burgervan](https://github.com/Kritika97Gaikwad/R-Shiny-Projects/assets/151272622/dd35bc56-fd74-4198-bc91-c5673003ec47)
 
+## Data Structure
+
+- **Visits Sheet:** Contains data related to customer visits.
+- **Prices Sheet:** Stores the selling prices for each burger type.
+- **Sales Sheet:** Captures the quantity sold for each burger type.
+
 
 # Burger Bounty Shiny Dashboard
 
@@ -26,6 +32,7 @@ This Shiny app serves as a dashboard for summarizing and updating monthly sales 
 - Readxl package installed (`install.packages("readxl")`)
 - install.packages("openxlsx")
 
+
 ### Running the App
 
 1. Open RStudio or your preferred R environment.
@@ -39,11 +46,34 @@ This Shiny app serves as a dashboard for summarizing and updating monthly sales 
 3. Set the selling price for each burger type.
 4. Click the "Update" button to update the Excel file with the entered data.
 
-## Data Structure
+### Generate Regression Models:
 
-- **Visits Sheet:** Contains data related to customer visits.
-- **Prices Sheet:** Stores the selling prices for each burger type.
-- **Sales Sheet:** Captures the quantity sold for each burger type.
+Download 3.Forcasting/Forcasting_using_linear_regression.R and open Forcasting_using_linear_regression.R in R or RStudio.
+Run the script to generate six linear multiple regression models for each type of burger.
+The script reads data from data/BurgerBounty.xlsx and outputs the regression models.
+
+### Regression Models
+Six linear multiple regression models are created, one for each type of burger. Each model predicts sales (number of burgers) based on the following seven independent variables:
+- Burger price
+- Visited town
+- Time spent at the location
+- Average precipitation
+- Average temperature
+- Whether there was an event
+- Whether it was a weekend
+
+### 4. Shiny App Design
+The Shiny app provides location recommendations based on user inputs and the regression models. The user interface includes:
+
+Four inputs for variables common to all locations:
+- Hours to be spent at the location
+- Average precipitation
+- Average temperature
+- Whether the visit will be on a weekend day
+- Seven inputs for each location to specify whether there will be an event at that location
+- Six inputs for the planned price per burger for each burger type
+- A button titled "Recommendations"
+
 
 ## Contributing
 
