@@ -108,4 +108,4 @@ server= function(input, output) {
                   input$P1,input$P2,input$P3,input$P4,input$P5,input$P6)
     })
   }
-shinyApp(ui, server)
+shinyApp(ui, server)   
